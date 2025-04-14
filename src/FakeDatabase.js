@@ -23,22 +23,19 @@ class FakeDatabase {
         id: '1a2b3c4d',
         title: 'Understanding JavaScript Closures',
         content: 'Closures are a powerful feature of JavaScript...',
-        author: '88d6bec2',
-        datePublished: '2023-10-01'
+        author: '88d6bec2'
       },
       {
         id: '2b3c4d5e',
         title: 'A Guide to CSS Flexbox',
         content: 'Flexbox is a one-dimensional layout method...',
-        author: 'b4c3e5a1',
-        datePublished: '2023-10-02'
+        author: 'b4c3e5a1'
       },
       {
         id: '3c4d5e6f',
         title: 'Getting Started with React',
         content: 'React is a JavaScript library for building user interfaces...',
-        author: 'c5e3b2a4',
-        datePublished: '2023-10-03'
+        author: 'c5e3b2a4'
       },
     ];
 
@@ -47,22 +44,19 @@ class FakeDatabase {
         id: '1a2b3c4d5e',
         content: 'Great post! Very informative.',
         name: 'Anon',
-        postId: '1a2b3c4d',
-        datePublished: '2023-10-04'
+        postId: '1a2b3c4d'
       },
       {
         id: '2b3c4d5e6f',
         content: 'I learned a lot from this article. Thanks!',
         name: 'Mr. Wizard',
-        postId: '2b3c4d5e',
-        datePublished: '2023-10-05'
+        postId: '2b3c4d5e'
       },
       {
         id: '3c4d5e6f7g',
         content: 'This is exactly what I was looking for.',
         name: 'Pokemane Charles',
-        postId: '3c4d5e6f',
-        datePublished: '2023-10-06'
+        postId: '3c4d5e6f'
       },
     ];
   }

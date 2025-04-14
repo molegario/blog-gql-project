@@ -22,9 +22,6 @@ export const Post = new GraphQLObjectType({
         return fakeDatabase.getAuthor(post.author)
       }
     },
-    datePublished: {
-      type: GraphQLString,
-    },
     comments: {
       type: new GraphQLList(Comment),
       resolve: (post) => {

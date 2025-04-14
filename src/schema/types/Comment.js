@@ -15,10 +15,7 @@ export const Comment = new GraphQLObjectType({
     },
     postId: {
       type: GraphQLString,
-    },
-    datePublished: {
-      type: GraphQLString,
-    },
+    }
   })
 });
 
