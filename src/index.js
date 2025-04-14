@@ -1,3 +1,22 @@
 import { graphql } from 'graphql';
+import { schema } from './schema';
 
-console.log('GraphQL is ready to use!');
+
+const query = `
+  {
+    posts {
+      title,
+      content,
+      author {
+        name,
+        email,
+      },
+    }
+  }
+`;
+
+graphql({schema, source: query}).then((result) => {
+  console.log(JSON.stringify(result, null, 2));
+}).catch(error => {
+  console.error(error);
+});

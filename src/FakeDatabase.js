@@ -23,21 +23,21 @@ class FakeDatabase {
         id: '1a2b3c4d',
         title: 'Understanding JavaScript Closures',
         content: 'Closures are a powerful feature of JavaScript...',
-        authorId: '88d6bec2',
+        author: '88d6bec2',
         datePublished: '2023-10-01'
       },
       {
         id: '2b3c4d5e',
         title: 'A Guide to CSS Flexbox',
         content: 'Flexbox is a one-dimensional layout method...',
-        authorId: 'b4c3e5a1',
+        author: 'b4c3e5a1',
         datePublished: '2023-10-02'
       },
       {
         id: '3c4d5e6f',
         title: 'Getting Started with React',
         content: 'React is a JavaScript library for building user interfaces...',
-        authorId: 'c5e3b2a4',
+        author: 'c5e3b2a4',
         datePublished: '2023-10-03'
       },
     ];
@@ -46,21 +46,21 @@ class FakeDatabase {
       {
         id: '1a2b3c4d5e',
         content: 'Great post! Very informative.',
-        authorId: '88d6bec2',
+        name: 'Anon',
         postId: '1a2b3c4d',
         datePublished: '2023-10-04'
       },
       {
         id: '2b3c4d5e6f',
         content: 'I learned a lot from this article. Thanks!',
-        authorId: 'b4c3e5a1',
+        name: 'Mr. Wizard',
         postId: '2b3c4d5e',
         datePublished: '2023-10-05'
       },
       {
         id: '3c4d5e6f7g',
         content: 'This is exactly what I was looking for.',
-        authorId: 'c5e3b2a4',
+        name: 'Pokemane Charles',
         postId: '3c4d5e6f',
         datePublished: '2023-10-06'
       },
@@ -84,7 +84,7 @@ class FakeDatabase {
   }
 
   getPostsOfAuthor(authorId) {
-    return this.blogPosts.filter(post => post.authorId === authorId);
+    return this.blogPosts.filter(post => post.author === authorId);
   }
 
   addNewBlogPost(post) {
@@ -92,6 +92,13 @@ class FakeDatabase {
     this.blogPosts.push(newPost);
     return newPost;
   }
+
+  addNewComment(comment) {
+    const newComment = {...comment, id: Math.random().toString(36).substr(2, 9)};
+    this.comments.push(newComment);
+    return newComment;
+  }
+
 }
 
 export const fakeDatabase = new FakeDatabase();
